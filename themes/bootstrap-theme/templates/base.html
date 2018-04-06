@@ -34,11 +34,11 @@
                     {% for p in pages %}
                     {% if p == page %}
                     <li class="nav-item active">
-                            <a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}<span class="sr-only">(current)</span></a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                            <a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
+                            <a class="nav-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
                     </li>
                     {% endif %}
                     {% endfor %}
