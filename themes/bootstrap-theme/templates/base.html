@@ -30,6 +30,19 @@
                     {% endif %}
                     {% endfor %}
                     {% endif %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in pages %}
+                    {% if p == page %}
+                    <li class="nav-item active">
+                            <a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}<span class="sr-only">(current)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                            <a class="nav-link" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
                 </ul>
             </div>
         </nav>

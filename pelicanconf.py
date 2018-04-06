@@ -33,3 +33,9 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
+LOAD_CONTENT_CACHE =  False
+
+DISPLAY_CATEGORIES_ON_MENU = True
+
+DISPLAY_PAGES_ON_MENU = False
