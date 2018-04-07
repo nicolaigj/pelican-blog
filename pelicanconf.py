@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Nicolai Gjellestad'
-SITENAME = 'Nicoblog'
+SITENAME = 'Nicode'
 SITEURL = ''
 
 PATH = 'content'
@@ -36,6 +36,6 @@ RELATIVE_URLS = True
 
 LOAD_CONTENT_CACHE =  False
 
-DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = True
 
 DISPLAY_PAGES_ON_MENU = True
