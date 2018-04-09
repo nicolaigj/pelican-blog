@@ -10,7 +10,7 @@
         {% endblock head %}
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class="container">
             <a class="navbar-brand" href="#">{{ SITENAME }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,14 +50,13 @@
                     {% endif %}
                 </ul>
             </div>
-        </nav>
+        </div></nav>
         
         <div class="container">
-            <h1>Hello, world!</h1>
             {% block content %}
             {% endblock %}
         </div>
-        <footer id="contentinfo" class="page-footer font-small dark pt-4 mt-4">
+        <footer id="contentinfo" class="page-footer font-small blue pt-4 mt-4">
                 <address id="about">
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
                 which takes great advantage of <a href="http://python.org">Python</a>.

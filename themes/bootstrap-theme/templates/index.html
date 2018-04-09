@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content">
+    {% block content_title %}
+    <h3>All articles</h3>
+    {% endblock %}
+    <ol class="list-group list-group-flush" id="post-list">
+        {% for article in articles_page.object_list %}
+        <article class="list-group-item">
+            <header><a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h4>{{ article.title }}</h4></a></header>
+            <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
+            <address class="vcard author">By
+                {% for author in article.authors %}
+                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+            </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+        </article>
+        
+        {% endfor %}
+    </ol>
+</section>
+{% endblock %}
