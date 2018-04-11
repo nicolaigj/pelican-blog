@@ -1,6 +1,7 @@
 Title: Kakefest
 Date: 2018-01-31 10:06
 Category: Food
+Front_Picture: https://i.imgur.com/grgpd23.jpg
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam metus risus, sollicitudin ut volutpat a, malesuada quis elit. Duis tristique egestas ante, non faucibus ligula porttitor quis. Nunc sit amet quam lacus. Proin porttitor orci orci. Maecenas sit amet erat dui. Etiam ut bibendum tellus, non euismod sem. Quisque tincidunt lectus in elit lobortis, eu viverra diam consectetur. Sed malesuada egestas rhoncus. Fusce sed lacus iaculis, mattis turpis in, ultrices nisi. Nam tincidunt quam sit amet bibendum posuere. Integer in elit ultricies, fermentum magna eget, tempus turpis.
 
