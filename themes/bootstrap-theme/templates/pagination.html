@@ -1,0 +1,15 @@
+{% if DEFAULT_PAGINATION %}
+    <nav aria-label="Page navigation" class="container">
+        <ul class="pagination">
+            {% if articles_page.has_previous() %}
+                <li class="page-item"><a class="page-link" href="{{ SITEURL }}/{{ articles_previous_page.url }}">Previous</a></li>
+            {% endif %}
+            {% for a in articles_paginator %}
+            {% endfor %}
+            {% if articles_page.has_next() %}
+                <li class="page-item"><a class="page-link" href="{{ SITEURL }}/{{ articles_next_page.url }}">Next</a></li>
+            {% endif %}
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+        </ul>
+    </nav>
+{% endif %}

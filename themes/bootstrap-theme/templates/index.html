@@ -11,7 +11,7 @@
                     <article class="list-group-item">
                         <header>    
                             <img src="{{ article.front_picture }}" class="img-fluid" alt="Responsive image">
-                            <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h4>{{ article.title }}</h4></a>
+                            <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
                         </header>
                         <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                         <address class="vcard author">By
@@ -22,14 +22,12 @@
                         <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
                     </article>
                 </div>
-            {% elif loop.nextitem is not defined %}
-            </div>
             {% else %}
-                <div class="col-sm" style="width: 50%;">
+                <div class="col-sm">
                     <article class="list-group-item">
                         <header>    
                             <img src="{{ article.front_picture }}" class="img-fluid" alt="Responsive image">
-                            <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h4>{{ article.title }}</h4></a>
+                            <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
                         </header>
                         <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                         <address class="vcard author">By
@@ -42,7 +40,14 @@
                 </div>
             </div>
             {% endif %}
+            {% if loop.nextitem is not defined %}
+                <div class="col-sm"></div>
+            </div>
+            {% endif %}
         {% endfor %}
     </ol>
+    {% if articles_page.has_other_pages()%}
+        {% include 'pagination.html' %}
+    {% endif %}
 </section>
 {% endblock %}
