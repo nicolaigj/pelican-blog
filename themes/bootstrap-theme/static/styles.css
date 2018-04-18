@@ -1,3 +1,7 @@
 .article-display-img {
     width: 50%;
 }
+
+.article-items-no-border {
+    border: none;
+}
