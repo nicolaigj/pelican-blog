@@ -10,7 +10,9 @@
                 <div class="col-sm">
                     <article class="list-group-item">
                         <header>    
-                            <img src="{{ article.front_picture }}" class="img-fluid" alt="Responsive image">
+                            {% if article.display_image is defined %}
+                            <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.display_image }}" class="img-fluid"></a>
+                            {% endif %}
                             <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
                         </header>
                         <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
@@ -26,7 +28,7 @@
                 <div class="col-sm">
                     <article class="list-group-item">
                         <header>    
-                            <img src="{{ article.front_picture }}" class="img-fluid" alt="Responsive image">
+                            <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.display_image }}" class="img-fluid"></a>
                             <a class="list-group-item-action" href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
                         </header>
                         <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
